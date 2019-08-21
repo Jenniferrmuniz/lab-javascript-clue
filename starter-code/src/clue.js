@@ -169,9 +169,11 @@ function pickMystery(){
     mysteryEnvelope.suspect = randomSelector(charactersArray);
     mysteryEnvelope.room = randomSelector(roomsArray);
     mysteryEnvelope.weapon = randomSelector(weaponsArray);
+    return mysteryEnvelope;
 }
 
 function revealMystery(mysteryEnvelope){
+    console.log(mysteryEnvelope)
     let str = mysteryEnvelope.suspect.first_name + ' ' + mysteryEnvelope.suspect.last_name + ' killed Mr. Boddy using the ' + mysteryEnvelope.weapon.name + ' in the ' + mysteryEnvelope.room +'!!!!';
     return str;
 }
@@ -181,3 +183,8 @@ function revealMystery(mysteryEnvelope){
 
 pickMystery();
 console.log(revealMystery(mysteryEnvelope));
+
+
+
+
+
